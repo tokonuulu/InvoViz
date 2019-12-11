@@ -1,0 +1,58 @@
+.few .dygraph-legend > span.highlight { border: 1px solid grey; }
+
+.many .dygraph-legend > span { display: none; }
+
+.many .dygraph-legend > span.highlight { display: inline; }
+
+.many {
+    margin: 10px;
+}
+.few {
+    margin: 10px;
+}
+
+div.charts {
+    position: relative;
+    border: 3px solid #73AD21;
+    margin: 10px;
+}
+
+.btn-group a {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+
+sl{
+    margin: 0;
+    padding: 10px 10px;
+    width: 100px;
+    background-color: #fff;
+}
+
+sl2{
+    margin: 0;
+    padding: 10px 10px;
+    width: 100px;
+    background-color: #fff;
+}
