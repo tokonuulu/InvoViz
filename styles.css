@@ -1,14 +1,9 @@
-.few .dygraph-legend > span.highlight { border: 1px solid grey; }
+.line-chart .dygraph-legend > span { display: none; }
+.line-chart .dygraph-legend > span.highlight { display: inline; }
 
-.many .dygraph-legend > span { display: none; }
-
-.many .dygraph-legend > span.highlight { display: inline; }
-
-.many {
-    margin: 10px;
-}
-.few {
-    margin: 10px;
+.line-chart {
+    margin: 50px;
+    display: inline;
 }
 
 div.charts {
@@ -42,17 +37,36 @@ div.charts {
     background-color: #3e8e41;
 }
 
-
-sl{
-    margin: 0;
-    padding: 10px 10px;
-    width: 100px;
-    background-color: #fff;
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
 }
 
-sl2{
-    margin: 0;
-    padding: 10px 10px;
-    width: 100px;
-    background-color: #fff;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
+
+.dropdown-content {
+    display: none;
+    overflow: auto;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
