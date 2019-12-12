@@ -8,8 +8,17 @@
 
 div.charts {
     position: relative;
-    border: 3px solid #73AD21;
     margin: 10px;
+}
+
+div.heatmaps {
+    position: relative;
+    margin: 10px;
+}
+
+.heatmaps div {
+    margin: 30px;
+    display: inline;
 }
 
 .btn-group a {

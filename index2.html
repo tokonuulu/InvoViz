@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Information Visualization Term Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="./node_modules/dygraphs/dist/dygraph.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/crossfilter2/crossfilter.js"></script>
+
+    <script src="./node_modules/d3/dist/d3.js"></script>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./node_modules/dygraphs/dist/dygraph.css">
 
-    <script src="synchronizer.js"></script>
-    <script src="load_data.js"></script>
     <script src="options_selector.js"></script>
+    <script src="load_data.js"></script>
+    <script src="synchronizer.js"></script>
 
 </head>
 
@@ -28,42 +31,33 @@
     <a>Q4</a>
 </div>
 
-<p>Select the floor and zone</p>
-<sl>
-    <select id = "floor" multiple size="3">
-        <option value="floor1">floor1</option>
-        <option value="floor2">floor2</option>
-        <option value="floor3">floor3</option>
-    </select><select id = "zone"  multiple size="8">
-    <option value="zone1">zone1</option>
-    <option value="zone2">zone2</option>
-    <option value="zone3">zone3</option>
-    <option value="zone4">zone4</option>
-    <option value="zone5">zone5</option>
-    <option value="zone6">zone6</option>
-    <option value="zone7">zone7</option>
-    <option value="zone8">zone8</option>
-</select>
-    <span id="result"></span>
-    <input type="button" id="but1" value="Submit" onclick="locationOptionSelected();">
-</sl>
+<p>Select the sensor</p>
+<div class="dropdown">
+    <button class="dropbtn">Sensor</button>
+    <div class="dropdown-content">
+        <a href="#">REHEAT COIL Power</a>
+        <a href="#">RETURN OUTLET CO2 Concentration</a>
+        <a href="#">SUPPLY INLET Mass Flow Rate</a>
+        <a href="#">SUPPLY INLET Temperature</a>
+        <a href="#">VAV REHEAT Damper Position </a>
+        <a href="#">Equipment Power</a>
+        <a href="#">Lights Power</a>
+        <a href="#">Mechanical Ventilation Mass Flow Rate</a>
+        <a href="#">Thermostat Temp</a>
+        <a href="#">Thermostat Cooling Setpoint </a>
+        <a href="#">Thermostat Heating Setpoint</a>
+    </div>
+</div>
+<input type="checkbox" id="chk-stacked" checked=""><label for="chk-stacked"> Stack </label>
 
+<div class="charts" id="charts"> </div>
+<div class="heatmaps" id="heatmaps">
+    <div id="htm1"></div>
+    <div id="htm2"></div>
+    <div id="htm3"></div>
+</div>
 
-<p>Select the staff member</p>
-<sl2>
-    <select id = "bldg"  multiple size="8">
-        <option value="BramarMat">BramarMat</option>
-        <option value="co2">CO2</option>
-        <option value="hazium">Hazium</option>
-        <option value="vntl">ventilation</option>
-    </select>
-    <span id="bldg_result"></span>
-    <input type="button" id="but2" value="Submit" onclick="sensorOptionSelected();">
-</sl2>
-
-<div class="charts" id="charts"></div>
-
-<script src='simple_chart.js'></script>
+<script src='sensor_chart.js'></script>
 
 </body>
 </html>

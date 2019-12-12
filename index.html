@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Information Visualization Term Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="./node_modules/dygraphs/dist/dygraph.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/crossfilter2/crossfilter.js"></script>
+
+    <script src="./node_modules/d3/dist/d3.js"></script>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./node_modules/dygraphs/dist/dygraph.css">
@@ -49,6 +51,11 @@
 <input type="checkbox" id="chk-stacked" checked=""><label for="chk-stacked"> Stack </label>
 
 <div class="charts" id="charts"> </div>
+<div class="heatmaps" id="heatmaps">
+    <div id="htm1"></div>
+    <div id="htm2"></div>
+    <div id="htm3"></div>
+</div>
 
 <script src='sensor_chart.js'></script>
 
