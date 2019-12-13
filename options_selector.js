@@ -7,6 +7,9 @@ $(document).ready(function(){
 
     $(".dropbtn").click(function(event){
         $(".dropdown-content").toggle();
+        $("#htm1").empty();
+        $("#htm2").empty();
+        $("#htm3").empty();
     });
 });
 

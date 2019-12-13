@@ -165,6 +165,8 @@ let getDataForHeatMap  = function (floor, sensor, day) {
         let key = byZoneTimeList[i].key;
         let value = byZoneTimeList[i].value / 12;
 
+        if (key.includes("null"))
+            continue;
         let split = key.split('-');
         data.push({zone: split[0].replace("_", ""), hour:split[1], value});
     }
@@ -186,6 +188,7 @@ let drawHeatMap = function (floor, sensor, day, elementID)
     chart.appendChild(div);*/
 
     let data = getDataForHeatMap(floor, sensor, day);
+    if (data.length ===  0) return;
 
     // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 30, left: 30},
@@ -292,10 +295,9 @@ let drawHeatMap = function (floor, sensor, day, elementID)
 
 let redrawHeatMaps = function (floor, sensor, day) {
     var heats = document.getElementById('heatmaps');
-    //document.querySelector("#htm1").innerHTML = '';
-    //document.querySelector("#htm2").innerHTML = '';
-    //document.querySelector("#htm3").innerHTML = '';
-
+    $("#htm1").empty();
+    $("#htm2").empty();
+    $("#htm3").empty();
 
     console.log("day from callback:" + day);
     let daystr = day.substr(day.indexOf(" ")+1);
@@ -307,17 +309,6 @@ let redrawHeatMaps = function (floor, sensor, day) {
 let drawGraphs = function (sensor) {
     var charts = document.getElementById('charts');
 
-    /*let list = [];
-
-    list.push({zone: "z1", hour:"00:00", value:10});
-    list.push({zone: "z2", hour:"01:00", value:30});
-    list.push({zone: "z3", hour:"02:00", value:55});*/
-
-    //draw_heatmap(list);
-    //draw_heatmap("F_1", sensor);
-    //draw_heatmap(list);
-
-
     while (charts.firstChild) {
         charts.removeChild(charts.firstChild);
     }
@@ -328,8 +319,6 @@ let drawGraphs = function (sensor) {
     gs.push(drawGraphFloor("F_1", sensor));
     gs.push(drawGraphFloor("F_2", sensor));
     gs.push(drawGraphFloor("F_3", sensor));
-
-    //drawHeatMap("F_1", sensor, 31);
 
     var sync = Dygraph.synchronize(gs, {zoom: true, selection: true, range: false});
 
