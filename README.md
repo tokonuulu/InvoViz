@@ -1,1 +1,1 @@
-erem
+This our(Akylbek, Kanybek) implementation of Information Visualization Term Project.
