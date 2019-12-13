@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Information Visualization Term Project</title>
+    <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="./node_modules/dygraphs/dist/dygraph.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/crossfilter2/crossfilter.js"></script>
+   
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-    <script src="./node_modules/d3/dist/d3.js"></script>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./node_modules/dygraphs/dist/dygraph.css">
@@ -17,59 +20,44 @@
     <script src="options_selector.js"></script>
     <script src="load_data.js"></script>
     <script src="synchronizer.js"></script>
+    <script src="prox_data_parsing.js"></script>
 
 </head>
 
 <body>
 <h1>Information Visualization Term Project</h1>
-<p>Click on the buttons below to see visualization for the 	corresponding questions</p>
+<p>Click on the buttons below to see visualization for the  corresponding questions</p>
 
 <div class="btn-group">
-    <a>Q1</a>
-    <a type="button" href="index.html" >Q2</a>
-    <a type="button" href="index2.html" >Q3</a>
+    <a type="button" href="index.html" >Q1</a>
+    <a type="button" href="index2.html" >Q2</a>
+    <a>Q3</a>
     <a>Q4</a>
 </div>
 
-<p>Select the sensor</p>
-<div class="dropdown">
-    <button class="dropbtn">Sensor</button>
-    <div class="dropdown-content">
-        <a href="#">REHEAT COIL Power</a>
-        <a href="#">RETURN OUTLET CO2 Concentration</a>
-        <a href="#">SUPPLY INLET Mass Flow Rate</a>
-        <a href="#">SUPPLY INLET Temperature</a>
-        <a href="#">VAV REHEAT Damper Position</a>
-        <a href="#">Equipment Power</a>
-        <a href="#">Lights Power</a>
-        <a href="#">Mechanical Ventilation Mass Flow Rate</a>
-        <a href="#">Thermostat Temp</a>
-        <a href="#">BATH_EXHAUST:Fan Power</a>
-        <a href="#">VAV_SYS AIR LOOP INLET Mass Flow Rate</a>
-        <a href="#">VAV_SYS AIR LOOP INLET Temperature</a>
-        <a href="#">VAV Availability Manager Night Cycle Control Status</a>
-        <a href="#">VAV_SYS COOLING COIL Power</a>
-        <a href="#">VAV_SYS HEATING COIL Power</a>
-        <a href="#">VAV_SYS SUPPLY FAN OUTLET Mass Flow Rate</a>
-        <a href="#">VAV_SYS SUPPLY FAN OUTLET Temperature</a>
-        <a href="#">VAV_SYS SUPPLY FAN:Fan Power</a>
-        <a href="#">VAV_SYS Outdoor Air Flow Fraction</a>
-        <a href="#">VAV_SYS Outdoor Air Mass Flow Rate</a>
-        <a href="#">Thermostat Heating Setpoint</a>
-        <a href="#">Thermostat Cooling Setpoint</a>
+<p>This is the visualization for the 1st question</p>
+<p>We used heatmap to visualize number of people in a building</p>
+<p>Each row corresponds to days and columns to floors</p>
+<p>In a heatmap, rows stand for zones and colums to hours</p>
+<p>You can see number of people at each cell by moving mouse to it</p>
 
-    </div>
-</div>
-<input type="checkbox" id="chk-stacked" checked=""><label for="chk-stacked"> Stack </label>
+<div id="my_dataviz"></div>
+<div id="my_dataviz2"></div>
+<div id="my_dataviz3"></div>
+<div id="my_dataviz4"></div>
+<div id="my_dataviz5"></div>
+<div id="my_dataviz6"></div>
+<div id="my_dataviz7"></div>
+<div id="my_dataviz8"></div>
+<div id="my_dataviz9"></div>
+<div id="my_dataviz10"></div>
+<div id="my_dataviz11"></div>
+<div id="my_dataviz12"></div>
+<div id="my_dataviz13"></div>
+<div id="my_dataviz14"></div>
+<div id="my_dataviz15"></div>
 
-<div class="charts" id="charts"> </div>
-<div class="heatmaps" id="heatmaps">
-    <div id="htm1"></div>
-    <div id="htm2"></div>
-    <div id="htm3"></div>
-</div>
-
-<script src='sensor_chart.js'></script>
+<script src='prox_data_parsing.js'></script>
 
 </body>
 </html>
